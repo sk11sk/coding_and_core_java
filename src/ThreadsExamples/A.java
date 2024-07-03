@@ -189,8 +189,7 @@ package ThreadsExamples;
 //
 //
 //
-//// trying to  create  class A inside main method using anonymous class
-//
+///creating thread with anonymous class 
 //        Runnable obj1  = new Runnable () {
 //            @Override
 //            public void run() {
@@ -206,7 +205,7 @@ package ThreadsExamples;
 //            }
 //        };
 //
-//// trying to  create  class  Take_Input_array_print_find_sum inside main method using Lambda Expression
+//// ///creating thread with lambda expression 
 //
 //
 //
