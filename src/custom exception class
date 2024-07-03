@@ -1,0 +1,42 @@
+custom exception class , use of try catch 
+
+
+class WithdrwaCash{
+
+    public static void main(String[] args)   {
+        System.out.println("enter amount");
+        Scanner scan = new Scanner(System.in);
+        int amount = scan.nextInt();
+
+        int balance =500;
+
+        if (balance>amount){
+
+            System.out.println("collect cash ");
+
+
+
+        }else{
+
+            try {
+                throw  new InsufficientBalance("insufficient balance ");
+            } catch (InsufficientBalance e) {
+                e.printStackTrace();
+            }
+
+        }
+
+        System.out.println("amount balance "+balance);
+
+    }
+
+}
+
+class InsufficientBalance extends RuntimeException{
+
+    public InsufficientBalance(String message) {
+        super(message);
+
+    }
+}
+
