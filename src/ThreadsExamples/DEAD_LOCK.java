@@ -1,5 +1,7 @@
 package ThreadsExamples;
 
+
+// best is to use rannable and lambda expression to create threads 
 public class DEAD_LOCK {
 
      private static final  Object lock1 = new Object ();
