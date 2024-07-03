@@ -179,46 +179,8 @@ package ThreadsExamples;
 
 
 // implement  anonymous class
-// trying to  create this class inside main method using anonymous class and class Take_Input_array_print_find_sum with  lambda expression
+// trying to  create  threads using anonymous class and   lambda expression
 
-
-//public class A implements Runnable  {
-//    public void run () {
-//
-//        for (int i = 0; i<5;i++)
-//        {
-//
-//            System.out.println("hi");
-//
-//            try {
-//                Thread.sleep(10);
-//            } catch (InterruptedException e) {
-//                throw new RuntimeException(e);
-//            }
-//
-//        }
-//
-//    }
-//}
-
-
-//class Take_Input_array_print_find_sum implements Runnable {
-//
-//    public void run () {
-//
-//        for (int i = 0; i<5;i++) {
-//
-//            System.out.println("hello");
-//            try {
-//                Thread.sleep(10);
-//            } catch (InterruptedException e) {
-//                throw new RuntimeException(e);
-//            }
-//        }
-//
-//    }
-//
-//}
 
 //
 //class C {
@@ -226,8 +188,6 @@ package ThreadsExamples;
 //    public static void main(String[] args) {
 //
 //
-////        A obj1  = new A ();
-////        Take_Input_array_print_find_sum obj2  = new Take_Input_array_print_find_sum ();
 //
 //// trying to  create  class A inside main method using anonymous class
 //
