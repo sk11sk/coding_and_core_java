@@ -19,7 +19,7 @@ package ThreadsExamples;
 //}
 //
 //
-//class Take_Input_array_print_find_sum  {
+//class B  {
 //
 //    public void show () {
 //
@@ -38,7 +38,7 @@ package ThreadsExamples;
 //
 //    public static void main(String[] args) {
 //     A obj1  = new A ();
-//     Take_Input_array_print_find_sum obj2  = new Take_Input_array_print_find_sum ();
+//     B obj2  = new B ();
 //
 //        obj1.show();   // sequential  object execution
 //        obj2.show();    // sequential  object execution
@@ -48,8 +48,10 @@ package ThreadsExamples;
 //}
 //
 
+//===============================================================================================================================
+// multithreading --  
 
-// multithreading --
+// using  extending thread class
 //
 //public class A extends Thread   {
 //
@@ -72,7 +74,7 @@ package ThreadsExamples;
 //}
 //
 //
-//class Take_Input_array_print_find_sum extends Thread  {
+//class B extends Thread  {
 //
 //    public void run () {
 //
@@ -95,7 +97,7 @@ package ThreadsExamples;
 //
 //    public static void main(String[] args) {
 //        A obj1  = new A ();
-//        Take_Input_array_print_find_sum obj2  = new Take_Input_array_print_find_sum ();
+//        B obj2  = new B ();
 //
 //
 //        obj1.start();   // sequential  object execution
@@ -106,7 +108,7 @@ package ThreadsExamples;
 //
 //}
 
-
+//====================================================================================================
 //  using runnable interface
 
 //public class A implements Runnable  {
@@ -130,7 +132,7 @@ package ThreadsExamples;
 //}
 //
 //
-//class Take_Input_array_print_find_sum implements Runnable {
+//class B implements Runnable {
 //
 //    public void run () {
 //
@@ -154,15 +156,9 @@ package ThreadsExamples;
 //    public static void main(String[] args) {
 //
 //
-////        A obj1  = new A ();
-////        Take_Input_array_print_find_sum obj2  = new Take_Input_array_print_find_sum ();
-//
-//
-//        Runnable obj1  = new A ();
-//        Runnable obj2  = new Take_Input_array_print_find_sum ();
-//
-//
-//
+//       A obj1  = new A ();
+//       B obj2  = new B ();
+
 //
 //        Thread thread1 = new Thread(obj1);
 //        Thread thread2 = new Thread(obj2);
@@ -178,7 +174,7 @@ package ThreadsExamples;
 //}
 
 
-// implement  anonymous class
+// ==========================================================================================================
 // trying to  create  threads using anonymous class and   lambda expression
 
 
@@ -190,6 +186,8 @@ package ThreadsExamples;
 //
 //
 ///creating thread with anonymous class 
+
+
 //        Runnable obj1  = new Runnable () {
 //            @Override
 //            public void run() {
@@ -205,6 +203,7 @@ package ThreadsExamples;
 //            }
 //        };
 //
+
 //// ///creating thread with lambda expression 
 //
 //
@@ -239,7 +238,7 @@ package ThreadsExamples;
 //
 //}
 
-
+//======================================================================================================================================
 // RACE CONDITION :: two threads operating on the  same data : data corruption not thread safe
 
 //class Counter{
@@ -269,7 +268,7 @@ package ThreadsExamples;
 //        };
 //
 //
-//// trying to  create  class  Take_Input_array_print_find_sum inside main method using Lambda Expression
+////
 //
 //
 //        Runnable obj2  = () -> {
@@ -290,13 +289,14 @@ package ThreadsExamples;
 //        thread1.join();
 //        thread2.join();
 //
-//        System.out.println(counter.count);  // not thread safe ..... data corruption
+//        System.out.println(counter.count);  // not thread safe ..... data corruption //  the output should be 20,000 but everytime it is different only 
+// that is what we refer as data corruption or race condition  or the apllication that is not thread safe 
 //    }
 //
 //}
 //
-
-// using synchronized  keyword  in  method
+//=============================================================================================================
+/////////////// using synchronized  keyword  in  method
 
 //
 //class Counter{
@@ -348,7 +348,7 @@ package ThreadsExamples;
 //    }
 //
 //}
-
+//====================================================================================================
  // USING SYNCHRONIZED BLOCK
 
 
@@ -408,7 +408,7 @@ package ThreadsExamples;
 //
 
 
-
+//=============================================================================================================
 
 // using  class level lock  keyword
 
@@ -470,9 +470,8 @@ package ThreadsExamples;
 //    }
 //
 //}
-
+//======================================================================================================================
 // using this keyword
-
 
 class Counter{
 
