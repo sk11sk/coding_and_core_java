@@ -93,13 +93,13 @@ public class DEAD_LOCK {
 //
 //        Runnable obj2  =  () ->{
 //
-//            synchronized (lock2) {
+//            synchronized (lock1) {
 //
-//                System.out.println("Thread2  is on lock 2 ");
+//                System.out.println("Thread2  is on lock 1 ");
 //
 //                System.out.println("Thread2   is waiting for lock 1   ");
 //
-//                synchronized (lock1){
+//                synchronized (lock2){
 //
 //                    System.out.println("Thread2  is on lock 1 and lock 2  ");
 //                }
