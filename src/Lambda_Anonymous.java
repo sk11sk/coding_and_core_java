@@ -84,4 +84,68 @@ class D   { // no inheritance needed to  implement feature of lambda expression 
 
 }
 
+// another example to demonstrate the use of lambda and annonymous class 
+
+//lambda expression can be used only with the functional interface because it uses a  single abstract method .
+
+
+interface Calculator {
+
+public int calcuate(int a , int b );
+
+
+}
+
+public  class Main {
+
+public static void main (String [] args ){
+
+
+Calculator c1 = (int a, int b )->{
+
+return a+b;
+
+};
+
+
+int sum = c1.calcuate(10,20);
+System.out.println(sum);
+
+
+
+Calculator c2 = (int a, int b)->{
+
+return a*b;
+
+
+};
+
+int product= c2.calcuate(10,20);
+
+System.out.println(product);
+
+
+Calculator c3 = new Calculator(){
+
+@Override
+public int calcuate(int a , int b ){
+
+return a-b;
+
+
+}
+
+
+};
+
+int subtract = c3.calcuate(20,10);
+System.out.println(subtract);
+
+}
+
+
+
+
+}
+
 
