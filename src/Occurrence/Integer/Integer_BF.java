@@ -1,5 +1,5 @@
 package Occurrence.Integer;
-
+//BF = brute force
 public class Integer_BF {
 
     public static void main(String[] args) {
