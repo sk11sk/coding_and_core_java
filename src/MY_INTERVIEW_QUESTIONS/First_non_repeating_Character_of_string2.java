@@ -47,3 +47,44 @@ public class First_non_repeating_Character_of_string2 {
 
     }
 }
+================================================
+
+    public class A {
+
+
+public static void main (String [] args ){
+
+String str  = "ssabkgkga";
+char [] arr =str.toCharArray();
+int n =arr.length;
+
+
+
+for (int  i =0 ; i<n; i++){
+    
+      int count=0;
+   for ( int j =0 ; j<n ; j++){
+if (i!=j){
+    
+    if (arr[i]==arr[j]){
+         
+        count++;
+
+}else if (arr[i]!=arr[j]&&j==n-1&&count==0){
+
+System.out.println(arr[i]);
+n=0; 
+
+
+}
+    
+
+}  
+    }
+
+}
+
+}
+
+
+}
