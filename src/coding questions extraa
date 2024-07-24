@@ -88,11 +88,126 @@ System.out.println((char)(arr[i]+32));
 
 }
 
+//=====================================================================
+public class A {
+
+public static void main (String [] args ){
+
+
+String str  = "algoPREP";
+
+char [] arr  = str.toCharArray();
+
+int n = arr.length;
+for (int i =0; i<n ; i++){
+
+if (arr[i]>='a' && arr[i] <='z'){
+
+System.out.println((char)(arr[i]-32));
+}else {
+     
+System.out.println((char)(arr[i]+32));
+    
+    
+}
+
+}
+
+
+}
+
+}
+
+
+//=============================================================
+
+//String concatenation 
 
 
 
+public class MyClass {
+  public static void main(String args[]) {
+      
+String str = "abcde";
+String str1 = " ";
+
+for (int i  =str.length()-1; i>=0; i--){
+   
+    
+    str1 = str1+str.charAt(i);
+}
+    System.out.println(str1);  
+      
+  }
+}
+
+//=========================================
+public class A {
+
+public static void main (String [] args ){
+
+ String str = " ";
+ 
+char [] arr  = {'a','b','d','e'};
+
+int n = arr.length;
+
+for (int i =0; i<n ; i++) {
+
+if (arr[i]>= 'a' && arr[i] <= 'z') {
+
+str = str+(char)(arr[i]);
+
+}
+
+}
+
+System.out.println(str);
+}
+
+}
+//=======================================
 
 
+public class A {
+ 
+public static void main (String [] args ){
+
+
+String str  = "algoPREP";
+
+char [] arr  = str.toCharArray();
+
+  int n = arr.length;
+
+  String str1   = "";
+  String str2  = "";
+  String str3  = "";
+
+   for (int i =0; i<n ; i++){
+
+if (arr[i]>='a' && arr[i] <='z'){
+
+
+
+str1 = str1 +(char)(arr[i]-32);
+
+  }else {
+     
+
+    
+  str2 = str2 +(char)(arr[i]+32);  
+}
+
+}
+str3  = str1+str2;
+System.out.println(str3);
+
+}
+
+}
+
+//=============================================
 
 
 
