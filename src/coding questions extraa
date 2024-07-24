@@ -209,8 +209,85 @@ System.out.println(str3);
 
 //=============================================
 
+public class A {
+ 
+public static void main (String [] args ){
 
 
+String str  = "algoprep";
+
+char [] arr  = str.toCharArray();
+
+int sp =0;
+int ep =arr.length-1;
+
+
+while (sp<ep){
+    
+  char temp = arr[sp];
+  arr[sp] =arr[ep];
+  arr[ep] = temp;
+   
+   sp++;
+   ep--;
+    
+    
+}
+
+for (char c:arr){
+    
+   System.out.print(c); 
+}
+
+}
+
+}
+
+//===========================================================
+
+
+public class A {
+ 
+public static void main (String [] args ){
+
+
+String str  = "algoprep";
+
+ int n = str.length();
+
+char [] arr  =  new  char [n];
+
+
+for (int i=0 ; i< n ; i++){
+    
+  arr[i] = str.charAt(i);  
+    
+}
+
+int sp =0;
+int ep =arr.length-1;
+
+
+while (sp<ep){
+    
+  char temp = arr[sp];
+  arr[sp] =arr[ep];
+  arr[ep] = temp;
+   
+   sp++;
+   ep--;
+    
+    
+}
+
+for (char c:arr){
+    
+   System.out.print(c); 
+}
+
+}
+
+}
 
 
 
