@@ -132,4 +132,34 @@ class MV1{
 
             }
         }
+//===============================================================================
 
+
+public class A {
+
+public static void main (String [] args ){
+
+int arr [] = {1,4,3,7}; 
+
+     boolean [] b = new boolean[11];
+     
+     
+     for (int i : arr){
+         
+         
+         b[i]=true;
+         
+     }
+     
+     for (int i =0; i<=10; i++){
+         
+         if (b[i]!=true){
+              System.out.println(i);
+         }
+        
+         
+     }
+
+  }
+
+}
