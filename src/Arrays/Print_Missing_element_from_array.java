@@ -163,3 +163,47 @@ int arr [] = {1,4,3,7};
   }
 
 }
+//======================================
+
+
+
+public class A {
+
+public static void main (String [] args ) {
+
+
+
+int[] baseArr = {4,6,7,3,2,8,9,10,1,5};
+
+int arr [] = {7,4,8}; 
+
+
+         
+     for (int i  =0 ; i <baseArr.length;){
+         
+             for (int j  =0 ; j<arr.length;){
+                 
+        if (i<baseArr.length && baseArr[i]==arr[j]){
+            
+            
+            i++;
+            j=0;
+        
+             
+        } else if (i<baseArr.length && baseArr[i]!= arr[j] && j == arr.length-1) {
+            
+            System.out.println(baseArr[i]);
+            i++;
+            j=0;
+            
+        }else {
+            j++;
+        }
+        
+     }
+
+   }
+
+ }
+ 
+}
