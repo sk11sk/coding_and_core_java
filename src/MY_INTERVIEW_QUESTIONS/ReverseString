@@ -32,3 +32,51 @@ public class ReverseString {
             System.out.println(reverse);
     }
 }
+=========================================================
+
+import java.util.*;
+
+public class ReverseString {
+
+    public static void main(String args[]) {
+
+        Scanner scan = new Scanner(System.in);
+        System.out.println(" Enter a sentence a reverse word by word ");
+
+        String str1 = scan.nextLine();
+
+        String[] arr1 = str1.split(" ");
+
+
+
+        for (int i = 0; i < arr1.length; i++) {
+
+            String str2 = arr1[i];
+            char[] ch = str2.toCharArray();
+
+            int sp = 0;
+            int ep = ch.length - 1;
+
+            while (sp < ep) {
+
+                char temp = ch[sp];
+                ch[sp] = ch[ep];
+                ch[ep] = temp;
+
+                sp++;
+                ep--;
+            }
+
+            for (char c : ch) {
+                System.out.print(c);
+
+
+            }
+            System.out.print(" ");
+
+
+          //now convert this character array to string array
+        }
+
+    }
+}
