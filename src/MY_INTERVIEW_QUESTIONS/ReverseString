@@ -5,32 +5,30 @@ public class ReverseString {
     public static void main(String args[]) {
 
         Scanner scan = new Scanner (System.in);
+        System.out.println(" Enter a sentence a reverse word by word ");
 
-        String str =  scan.nextLine();
+        String str1 =  scan.nextLine();
 
-        String  [] arr =  str.split(" ");
+        String  [] arr =  str1.split(" ");
 
         String reverse = "";
 
         for (int i =0 ; i<arr.length; i++){
 
+            String  str  = arr[i];
 
-            for (int j=arr[i].length()-1; j>=0; j--){
+            for (int j=str.length()-1; j>=0; j--){
 
 
-                //System.out.print(arr[i].charAt(j));
-                
-                reverse = reverse+arr[i].charAt(j);
+              //  System.out.print(str.charAt(j));
+
+               reverse = reverse+str.charAt(j);
 
             }
             reverse =reverse+" ";
 
-            //System.out.print(" ");
+           // System.out.print(" ");
         }
-        System.out.println(reverse);
+            System.out.println(reverse);
     }
 }
-
-
-i/p = The cat is on the wall
-o/p = ehT tac si no eht llaw
