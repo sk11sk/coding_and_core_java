@@ -1,0 +1,202 @@
+
+1.	Write a program to get a sentence from the user and reverse each word.
+Example:
+Input
+The cat is on the wall
+ehT tac si no eht llaw
+
+
+===============================================================================================================
+
+
+
+1.	Write a java program to create a 4X4 array and get the values from user using Scanner class.
+        Find out the largest number in each row and print it.
+        Eg: if your input is,
+
+ 2  4  9  8
+ 7  2  1  9
+ 1  5  8  7
+ 0  0  0  1
+
+The output should be
+
+  The largest number in row1 is 9
+  The largest number in row2 is 7
+  The largest number in row3 is 8
+  The largest number in row4 is 9
+
+
+
+                 OR 
+
+
+
+2.	Write a java program to create a 4X4 array and get the values from using Scanner class. 
+        Replace all backward diagonal elements of the matrix with -1.
+         Eg:  if your input is,
+
+               2  4  9  0
+               7  2  1  1
+               1  5  8  3
+               6  8  0  9
+
+The output should be
+
+               2   4   9  -1
+               7   2  -1   1
+               1  -1   8   3
+              -1   8   0   9
+
+
+===============================================================================================================
+
+
+
+
+
+
+Problem: A group of researchers is working on a secure way to validate special access codes for a high-security facility. 
+
+They decided to use a unique pattern to ensure the authenticity of these access codes. The following are the validation rules they created:
+
+
+
+rule 1 : same no of upper case  and lower case
+
+rule 2 : two number  should  be there
+
+rule 3 : only one  special character  
+
+rule 4 : add the numbers  and sum should be a multiple of 5  
+
+pass : "Sh14@"
+
+fail : "Shs1@"
+
+
+
+
+
+======================================================================
+
+day 2
+
+
+
+
+
+
+
+HPB bank is seeing a lot of customers who have defaulted their credit card payments. They would like to send a 
+final reminder to those customers who have defaulted their payments for 2 or more months. Hence, we need to identify these customers.
+Given a String containing comma separated account numbers, develop a program to find the account numbers which are 
+repeating multiple times (indicating that they have defaulted that many months).
+
+
+
+Example:
+
+
+1002345,187653,199541,1002345,189211,100222,199541,1002345,166296
+
+Output List will contain [1002345,199541]
+
+Method Signature: ArrayList findDefaulters()
+
+Return these account numbers as a List.
+
+Hint: Text input containing a comma separated string can be got from the user using Scanner
+
+import java.util.*;
+
+public class A {
+
+
+
+    public static void main(String[] args) {
+
+
+        Scanner scan = new Scanner (System.in);
+
+        System.out.println("enter the account numbers ");
+
+        String str   =   scan.nextLine();
+
+        String  [] arr = str.split(",\\s*");
+
+        List<String> list  =  findDefaulters(arr);
+
+        System.out.println(list);
+
+
+    }
+
+    static ArrayList findDefaulters( String arr [] ){
+
+        Map< String, Integer > map = new HashMap<>();
+
+        for (String s:arr) {
+
+//            if (!map.containsKey(s)){
+//
+//                map.put(s,1);
+//
+//            } else {
+//
+//                map.put(s,map.get(s)+1);
+//
+//            }
+
+            map.put(s,map.getOrDefault(s,0)+1);
+
+
+        }
+
+        ArrayList<String> list1  = new ArrayList<>();
+
+        for (String st : map.keySet()){
+
+            if (map.get(st)>=2){
+
+                list1.add(st);
+            }
+
+
+        }
+
+
+        return list1;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
